@@ -1,30 +1,40 @@
 # Data Science Pipelines Operator
 
+This is a test of the workflow.
+
 The Data Science Pipelines Operator (DSPO) is an OpenShift Operator that is used to deploy single namespace scoped 
 Data Science Pipeline stacks onto individual OCP namespaces.
 
 # Table of Contents
 
-1. [Overview](#overview)
-2. [Quickstart](#quickstart)
-   1. [Pre-requisites](#pre-requisites)
-   2. [Deploy the Operator via ODH](#deploy-the-operator-via-odh)
-   3. [Deploy the Operator standalone](#deploy-the-operator-standalone)
-   4. [Deploy DSPA instance](#deploy-dsp-instance)
-      1. [Deploy another DSPA instance](#deploy-another-dsp-instance)
-      2. [Deploy a DSPA with custom credentials](#deploy-a-dsp-with-custom-credentials)
-      3. [Deploy a DSPA with External Object Storage](#deploy-a-dsp-with-external-object-storage)
-3. [DataSciencePipelinesApplication Component Overview](#datasciencepipelinesapplication-component-overview)
-4. [Using a DataSciencePipelinesApplication](#using-a-datasciencepipelinesapplication)
-   1. [Using the Graphical UI](#using-the-graphical-ui)
-   2. [Using the API](#using-the-api)
-5. [Cleanup](#cleanup)
-   1. [Cleanup ODH Installation](#cleanup-odh-installation)
-   2. [Cleanup Standalone Installation](#cleanup-standalone-installation)
-6. [Run tests](#run-tests)
-7. [Metrics](#metrics)
-8. [Configuring Log Levels for the Operator](#configuring-log-levels-for-the-operator)
-9. [Deployment and Testing Guidelines for Developers](#deployment-and-testing-guidelines-for-developers)
+- [Data Science Pipelines Operator](#data-science-pipelines-operator)
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+- [Quickstart](#quickstart)
+  - [Pre-requisites](#pre-requisites)
+  - [Deploy the Operator via ODH](#deploy-the-operator-via-odh)
+    - [Using a development image](#using-a-development-image)
+  - [Deploy the Operator standalone](#deploy-the-operator-standalone)
+  - [Deploy DSP instance](#deploy-dsp-instance)
+    - [Deploy another DSP instance](#deploy-another-dsp-instance)
+    - [Deploy a DSP with custom credentials](#deploy-a-dsp-with-custom-credentials)
+    - [Deploy a DSP with external Object Storage](#deploy-a-dsp-with-external-object-storage)
+- [DataSciencePipelinesApplication Component Overview](#datasciencepipelinesapplication-component-overview)
+  - [Deploying Optional Components](#deploying-optional-components)
+    - [MariaDB](#mariadb)
+    - [Minio](#minio)
+    - [ML Pipelines UI](#ml-pipelines-ui)
+    - [ML Metadata](#ml-metadata)
+- [Using a DataSciencePipelinesApplication](#using-a-datasciencepipelinesapplication)
+  - [Using the Graphical UI](#using-the-graphical-ui)
+  - [Using the API](#using-the-api)
+- [Cleanup](#cleanup)
+  - [Cleanup ODH Installation](#cleanup-odh-installation)
+  - [Cleanup Standalone Installation](#cleanup-standalone-installation)
+- [Run tests](#run-tests)
+- [Metrics](#metrics)
+- [Configuring Log Levels for the Operator](#configuring-log-levels-for-the-operator)
+- [Deployment and Testing Guidelines for Developers](#deployment-and-testing-guidelines-for-developers)
 
 # Overview
 
